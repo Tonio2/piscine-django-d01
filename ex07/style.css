@@ -1,0 +1,96 @@
+/* General table styles */
+.periodic {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+	font-family: Arial, sans-serif;
+}
+
+/* Styling for each cell */
+.periodic .cell {
+	border: 1px solid #ddd;
+	padding: 10px;
+	background-color: #f8f8f8;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.cell:hover {
+	-webkit-transform: scale(1.2, 1.2);
+	-ms-transform: scale(1.2, 1.2);
+	transform: scale(1.2, 1.2);
+	z-index: 1;
+}
+
+/* Header styles */
+.periodic h4 {
+	margin: 0;
+	color: #333;
+	font-size: 16px;
+}
+
+/* List styles */
+.periodic ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 10px 0;
+}
+
+.periodic ul li {
+	margin: 5px 0;
+}
+
+/* First row special styling */
+.periodic .periodic-row:first-child .cell {
+	background-color: #ffdddd;
+}
+
+/* Second row special styling */
+.periodic .periodic-row:nth-child(2) .cell {
+	background-color: #ddffdd;
+}
+
+/* Empty cells styling */
+.periodic .cell:empty {
+	background-color: #fff;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+	.periodic .cell {
+		padding: 5px;
+		font-size: 12px;
+	}
+
+	.periodic h4 {
+		font-size: 14px;
+	}
+}
+
+
+.cell:nth-child(-n+2) {
+	background-color: orange;
+}
+
+.cell:nth-child(n+13) {
+	background-color: lightgrey;
+}
+
+.cell:nth-child(1) {
+	background-color: orangered;
+}
+
+.periodic-row:nth-child(2) .cell:nth-child(n+14),
+.periodic-row:nth-child(3) .cell:nth-child(n+15),
+.periodic-row:nth-child(4) .cell:nth-child(n+16),
+.periodic-row:nth-child(5) .cell:nth-child(n+17) {
+	background-color: yellow;
+}
+
+.periodic-row:nth-child(-n+6) .cell:nth-child(18) {
+	background-color: cyan;
+}
+
+.periodic-row:nth-child(n+9) {
+	background-color: pink;
+}
